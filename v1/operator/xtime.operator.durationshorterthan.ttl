@@ -1,0 +1,21 @@
+    ## Definition of used or common namespaces
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:  <https://www.w3.org/TR/owl-time/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+xtime:durationShorterThan
+    a                owl:NamedIndividual ;
+    a                skos:Concept ;
+    a                odrl:Operator ;
+    rdfs:label       "duration equals"@en ;
+    rdfs:comment     """TODO: xtime:durationShorterThan rdfs:comment."""@en ;
+    skos:definition  """TODO: xtime:durationShorterThan skos:definition"""@en ;
+    skos:note        """TODO: xtime:durationShorterThan skos:note."""@en ;
+    rdfs:isDefinedBy xtime: .
+
+## xtime.operator.durationshorterthan.ttl

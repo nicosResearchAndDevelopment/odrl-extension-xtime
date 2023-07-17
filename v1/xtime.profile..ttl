@@ -1,0 +1,108 @@
+    ## Definition of used or common namespaces
+@prefix dc:                <http://purl.org/dc/elements/1.1/> .
+@prefix dct:               <http://purl.org/dc/terms/> .
+@prefix owl:               <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:              <http://www.w3.org/ns/odrl/2/> .
+@prefix profile:           <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role:              <http://www.w3.org/ns/dx/prof/role/> .
+@prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ids:               <https://w3id.org/idsa/core/> .
+@prefix jla:               <https://www.nicos-ag.com/jlangkau> .
+
+@prefix xtime-profile:     <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+# Declare the ODRL Core Profile artifacts
+
+<http://www.w3.org/ns/odrl/2/core>
+    a                   dct:Standard ;
+    dct:title           "The ODRL Core Profile Version 2.2" ;
+    profile:hasResource _:ODRL-Information-Model-2-2 ;
+    profile:hasResource _:ODRL-Core-Profile-Version-2-2 .
+
+_:ODRL-Information-Model-2-2  # The normative W3C ODRL Information Model
+    a                   profile:ResourceDescriptor ;
+    profile:hasRole     role:specification ;
+    profile:hasArtifact <https://www.w3.org/TR/odrl-model/> ;
+    dct:title           "ODRL Information Model 2.2" ;
+    dct:issued          "2018-02-15"^^xsd:date ;
+    dct:publisher       "W3C" ;
+    dct:format          <https://www.iana.org/assignments/media-types/text/html> ;
+    dct:conformsTo      <https://www.w3.org/TR/html/> .
+
+_:ODRL-Core-Profile-Version-2-2  # The ODRL Core Profile vocabulary terms
+    a                   profile:ResourceDescriptor ;
+    profile:hasRole     role:vocabulary ;
+    profile:hasArtifact <tbd> ;
+    dct:title           "ODRL Core Profile Version 2.2" ;
+    ## TODO :: dct:issued          "tbd"^^xsd:date ;
+    dct:publisher       "W3C" ;
+    dct:format          <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dct:conformsTo      <https://www.w3.org/TR/turtle/> .
+
+## Declare the artifacts of the Time Extension 'xtime' Profile
+
+xtime-profile: # Properties of the Time Extension 'xtime' Profile v0.1
+    a                   profile:Profile ;
+    dct:title           "Time Extension 'xtime' v0.1 - ODRL Profile" ;
+    dct:description     """An ODRL Profile focusing on Time Extension 'xtime'."""@en ;
+    profile:isProfileOf <http://www.w3.org/ns/odrl/2/core> ;
+    profile:hasResource xtime-profile:ProfileSpec-md ;
+    profile:hasResource xtime-profile:ProfileVocabulary-ttl ;
+    dct:publisher       "International Data Space Association (IDSA)" ;
+    dc:creator          "Jörg Langkau, nicos AG" ;
+    owl:versionInfo     "0.1"^^xsd:string ;
+    dct:issued          "2023-03-10"^^xsd:date .
+
+xtime-profile:ProfileSpec-md # The Time Extension 'xtime' v0.1 specification MARKDOWN document
+    a                   profile:ResourceDescriptor ;
+    profile:hasRole     role:specification ;
+    profile:hasArtifact <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/README.md> ;
+    dct:title           "Time Extension 'xtime' Profile v0.1" ;
+    owl:versionInfo     "0.1"^^xsd:string ;
+    dct:issued          "2023-03-10"^^xsd:date ;
+    dct:format          <https://www.iana.org/assignments/media-types/text/markdown> ;
+    ## TODO: (find the right URL) dct:conformsTo      <https://www.w3.org/TR/html/>
+.
+
+xtime-profile:ProfileVocabulary-ttl    # The Usage Control Profile v0.1 Profile vocabulary terms using RDF Turtle syntax
+    a                   profile:ResourceDescriptor ;
+    profile:hasRole     role:vocabulary ;
+    ## region profile:hasArtifact
+    profile:hasArtifact <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/xtime.ttl>,
+                            ## region left operand order ALPHA
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/leftOperand/xtime.leftOperand.dayOfWeek.ttl>,
+                            ## endregion left operand
+                            ## region operators ORDER ALPHA
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.after.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.before.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.contains.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.disjoint.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.durationequals.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.durationlargerthan.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.durationlargerthanequals.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.durationshorterthan.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.durationshorterthanequals.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.during.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.equals.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.finishedBy.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.finishes.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.in.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.meets.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.metby.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.overlappedby.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.overlaps.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.startedby.ttl>,
+                        <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.starts.ttl>
+    ## endregion operators
+        ; ##REM: end of profile:hasArtifact
+    ## endregion profile:hasArtifact
+    dct:title           "Time Extension 'xtime' Profile v0.1" ;
+    owl:versionInfo     "1.0.0"^^xsd:string ;
+    dct:issued          "2023-07-17"^^xsd:date ;
+    dct:publisher       "International Data Space Association (IDSA)" ;
+    dct:format          <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dct:conformsTo      <https://www.w3.org/TR/turtle/> .
+
+## EOF xtime.profile.ttl

@@ -1,0 +1,23 @@
+    ## Definition of used or common namespaces
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:  <https://www.w3.org/TR/owl-time/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+xtime:overlaps
+    a                owl:NamedIndividual ;
+    a                skos:Concept ;
+    a                odrl:Operator ;
+    rdfs:label       "overlaps"@en ;
+    rdfs:comment     """TODO: xtime:overlaps rdfs:comment."""@en ;
+    skos:definition  """TODO: xtime:overlaps skos:definition"""@en ;
+    skos:note        """TODO: xtime:overlaps skos:note."""@en ;
+    owl:inverseOf    xtime:overlappedBy ;
+    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:intervalOverlaps> ;
+    rdfs:isDefinedBy xtime: .
+
+## xtime.operator.overlaps.ttl
