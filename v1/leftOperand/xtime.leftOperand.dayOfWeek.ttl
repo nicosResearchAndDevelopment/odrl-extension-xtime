@@ -15,7 +15,7 @@ xtime:dayOfWeek
     a                skos:Concept ;
     skos:definition  """TODO: xtime:dayOfWeek skos:definition"""@en ;
     skos:note        """TODO: xtime:dayOfWeek skos:note."""@en ;
-    rdfs:comment     """Result of 'xtime:dayOfWeek' is 'xsd:anyURI' pointing to 'time:DayOfWeek' Named Individuals ('time:Sunday' - 'time:Saturday')."""@en ;
+    rdfs:comment     """Result of 'xtime:dayOfWeek' is 'xsd:anyURI' pointing to (current) 'time:DayOfWeek' named individuals ('time:Sunday' - 'time:Saturday')."""@en ;
     rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:dayOfWeek> ;
     rdfs:isDefinedBy xtime: .
 

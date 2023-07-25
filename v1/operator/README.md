@@ -4,14 +4,16 @@
 
 - [Introduction](#introduction)
 - [Operator](#operator)
-    - [Befor](#before)
-	
+	- [after](#after)
+
 *Table of Content "xtime, Operator"*.
 
 ## Introduction
 
+---
+
 ## Operator
 
-### Before
+### after
 
 ---

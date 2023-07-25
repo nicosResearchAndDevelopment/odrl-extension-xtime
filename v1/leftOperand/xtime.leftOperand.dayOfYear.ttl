@@ -8,17 +8,14 @@
 
 @prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
 
-xtime:starts
+xtime:dayOfYear
     a                owl:NamedIndividual ;
+    a                odrl:LeftOperand ;
+    rdfs:label       "dayOfYear"@en ;
     a                skos:Concept ;
-    a                odrl:Operator ;
-    rdfs:label       "starts"@en ;
-    rdfs:comment     """TODO: xtime:starts rdfs:comment."""@en ;
-    skos:definition  """TODO: xtime:starts skos:definition"""@en ;
-    skos:note        """TODO: xtime:starts skos:note."""@en ;
-    owl:inverseOf    xtime:intervalStartedBy ;
-    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:intervalStarts> ;
+    skos:definition  """TODO: xtime:dayOfYear skos:definition"""@en ;
+    skos:note        """TODO: xtime:dayOfYear skos:note."""@en ;
+    rdfs:comment     """Result of 'xtime:dayOfYear' returns current day as position in given (current) year in 'xsd:integer'."""@en ;
     rdfs:isDefinedBy xtime: .
 
-
-## xtime.operator.starts.ttl
+## xtime.leftOperand.dayOfYear.ttl
