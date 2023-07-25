@@ -8,15 +8,15 @@
 
 @prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
 
-xtime:dayOfWeek
+xtime:monthOfYear
     a                owl:NamedIndividual ;
     a                odrl:LeftOperand ;
-    rdfs:label       "dayOfWeek"@en ;
+    rdfs:label       "monthOfYear"@en ;
     a                skos:Concept ;
-    skos:definition  """TODO: xtime:dayOfWeek skos:definition"""@en ;
-    skos:note        """TODO: xtime:dayOfWeek skos:note."""@en ;
-    rdfs:comment     """Result of 'xtime:dayOfWeek' is 'xsd:anyURI' pointing to (current) 'time:DayOfWeek' named individuals ('time:Sunday' - 'time:Saturday')."""@en ;
-    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:dayOfWeek> ;
+    skos:definition  """TODO: xtime:monthOfYear skos:definition"""@en ;
+    skos:note        """TODO: xtime:monthOfYear skos:note."""@en ;
+    rdfs:comment     """Result of 'xtime:monthOfYear' is 'xsd:anyURI' pointing to (current) 'time:MonthOfWeek' named individuals ('greg:January' - 'greg:December')."""@en ;
+    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:MonthOfYear> ;
     rdfs:isDefinedBy xtime: .
 
-## xtime.leftOperand.dayOfWeek.ttl
+## xtime.leftOperand.monthOfYear.ttl
