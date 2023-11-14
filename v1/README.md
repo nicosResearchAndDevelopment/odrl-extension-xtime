@@ -1,6 +1,15 @@
 # xtime, ODRL extension for OWL Time Ontology, Version 1
 
-Suggested prefix for the 'Time Extension* namespace: `xtime`. (`time` is reserved for [OWL Time Ontology](https://www.w3.org/TR/owl-time/).)
+Suggested prefix for the 'Time Extension' prefix:
+
+`xtime`
+
+(`time` is reserved for [OWL Time Ontology](https://www.w3.org/TR/owl-time/).)
+
+URI: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/tree/main/v1#>
+
+
+
 
 `xtime`, e**x**tending [OWL Time Ontology](https://www.w3.org/TR/owl-time/).
 
@@ -30,22 +39,23 @@ possible relations between time periods*](https://www.w3.org/TR/owl-time/#topolo
 turtle:
 
 ```turtle
+@prefix odrl:              <http://www.w3.org/ns/odrl/2/> .
 [
     a odrl:Constraint ;
     odrl:leftOperand  "P2Y"^^xsd:duration ;
     odrl:operator     xtime:durationLargerThan ;
     odrl:rightOperand "P1Y"^^xsd:duration ;
-]
+] .
 ```
 
 json:
 
 ```json
 {
-    @type: "odrl:Constraint",
-    "odrl:leftOperand":  { @type: "xsd:duration", @value: "P2Y" },
+    "@type": "odrl:Constraint",
+    "odrl:leftOperand":  { "@type": "xsd:duration", "@value": "P2Y" },
     "odrl:operator":     "xtime:durationLargerThan",
-    "odrl:rightOperand": { @type: "xsd:duration", @value: "P1Y" } ;
+    "odrl:rightOperand": { "@type": "xsd:duration", "@value": "P1Y" }
 }
 ```
 
