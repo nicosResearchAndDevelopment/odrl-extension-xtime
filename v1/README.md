@@ -40,6 +40,7 @@ turtle:
 
 ```turtle
 @prefix odrl:              <http://www.w3.org/ns/odrl/2/> .
+@prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
 [
     a odrl:Constraint ;
     odrl:leftOperand  "P2Y"^^xsd:duration ;
