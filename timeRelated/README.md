@@ -8,7 +8,7 @@
 |           | dateTimestamp  | instant        |                                                 |
 | **xtime** | temporalEntity | instant/period | "2023:10:12T12:00:00Z;P0Y;2023:10:12T12:00:00Z" |
 
-*Time related Properties*.
+*Time related Data Types*.
 
 ---
 
@@ -44,6 +44,6 @@
 |------------|----------|---------|---------|
 | **odrl**   | eq       |         |         |
 
-*Time related Operands*.
+*Time related Operators*.
 
 ---
