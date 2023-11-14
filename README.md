@@ -6,6 +6,6 @@
 
 ## Time Related
 
-[Selection of time related attributed Properties and Operands rom other models](./timeRelated/README.md).
+[Selection of time related Data Types, Properties and Operands](./timeRelated/README.md).
 
 ---
