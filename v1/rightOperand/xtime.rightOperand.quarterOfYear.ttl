@@ -1,0 +1,51 @@
+    ## Definition of used or common namespaces
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:  <https://www.w3.org/TR/owl-time/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+xtime:quarterOfYearFirst
+    a                owl:NamedIndividual ;
+    a                odrl:RightOperand ;
+    rdfs:label       "First quarter of year"@en ;
+    a                skos:Concept ;
+    skos:definition  """TODO:"""@en ;
+    skos:note        """TODO:"""@en ;
+    rdfs:comment     """Result of 'xtime:quarterOfYearFirst' has data type 'xtime:temporalEntity', reflecting the first quarter of given year as an interval."""@en ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:quarterOfYearSecond
+    a                owl:NamedIndividual ;
+    a                odrl:RightOperand ;
+    rdfs:label       "Second quarter of year"@en ;
+    a                skos:Concept ;
+    skos:definition  """TODO:"""@en ;
+    skos:note        """TODO:"""@en ;
+    rdfs:comment     """Result of 'xtime:quarterOfYearSecond' has data type 'xtime:temporalEntity', reflecting the second quarter of given year as an interval."""@en ;
+    rdfs:isDefinedBy xtime: .
+
+
+xtime:quarterOfYearThird
+    a                owl:NamedIndividual ;
+    a                odrl:RightOperand ;
+    rdfs:label       "Third quarter of year"@en ;
+    a                skos:Concept ;
+    skos:definition  """TODO:"""@en ;
+    skos:note        """TODO:"""@en ;
+    rdfs:comment     """Result of 'xtime:quarterOfYearThird' has data type 'xtime:temporalEntity', reflecting the third quarter of given year as an interval."""@en ;
+    rdfs:isDefinedBy xtime: .
+
+
+xtime:quarterOfYearFourth
+    a                owl:NamedIndividual ;
+    a                odrl:RightOperand ;
+    rdfs:label       "Fourth quarter of year"@en ;
+    a                skos:Concept ;
+    skos:definition  """TODO:"""@en ;
+    skos:note        """TODO:"""@en ;
+    rdfs:comment     """Result of 'xtime:quarterOfYearFourth' has data type 'xtime:temporalEntity', reflecting the fourth quarter of given year as an interval."""@en ;
+    rdfs:isDefinedBy xtime: .

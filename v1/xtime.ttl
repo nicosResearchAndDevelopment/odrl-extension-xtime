@@ -30,18 +30,27 @@ xtime:
 #    dct:license      <http://creativecommons.org/licenses/by/4.0/> ;
 .
 
+## SKOS Collection of all Left Operand concepts defined by this Profile
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#constraintLeftOperands>
+    a              skos:Collection ;
+    skos:prefLabel "ODRL Time Extension 'xtime' Constraint Left Operands"@en ;
+    skos:scopeNote "ODRL Time Extension 'xtime' v1 Terms"@en ;
+    skos:member    xtime:dayOfWeek ;
+    skos:member    xtime:dayOfYear ;
+    skos:member    xtime:monthOfYear ;
+    skos:member    xtime:now ;
+.
+
 ## SKOS Collection of all concepts defined by this Profile
 <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/>
     a              skos:Collection ;
-    skos:prefLabel "ODRL Time Extension 'xtime' Profile 'xtime'"@en ;
+    skos:prefLabel "ODRL Time Extension 'xtime' Profile"@en ;
     skos:scopeNote "All terms of the Time Extension 'xtime' Profile v0.1"@en ;
     ## all members below are from the ODRL Common Vocabulary, a specification exists
     ## region    ODRL
-    ## region    ODRL : action
-    ## endregion ODRL : action
-    ## region    ODRL : left operand
+    ## region    ODRL : Left Operand
     skos:member    odrl:dateTime ;
-    ## endregion ODRL : left operand
+    ## endregion ODRL : Left Operand
     ## endregion ODRL
 ## the member below is a concept created for this Profile (ODRL Time Extension 'xtime' Profile (v0.1))
 ##   it needs to be specified in this ontology
@@ -51,10 +60,13 @@ xtime:
 #    skos:member    xtime:EASTER_MONDAY ;    ## REM: proper date interval
     ## endregion   left operand
 
-    ## region      left operand
+    ## region      Left Operand
     ## order :: ALPHA
     skos:member    xtime:dayOfWeek ;
-    ## endregion   left operand
+    skos:member    xtime:dayOfYear ;
+    skos:member    xtime:monthOfYear ;
+    skos:member    xtime:now ;
+    ## endregion   Left Operand
 
     ## region      operator
     skos:member    xtime:before ;
@@ -81,6 +93,34 @@ xtime:
     skos:member    xtime:durationLargerThanEquals ;
     ## endregion   operator : duration-centric
     ## endregion   operator
+
+    ## region      Right Operand
+    ## order :: ALPHA
+    skos:member    xtime:day ;
+    skos:member    xtime:month ;
+    skos:member    xtime:quarterOfYearFirst ;
+    skos:member    xtime:quarterOfYearSecond ;
+    skos:member    xtime:quarterOfYearThird ;
+    skos:member    xtime:quarterOfYearFourth ;
+    skos:member    xtime:tomorrow ;
+    skos:member    xtime:year ;
+    ## endregion   Right Operand
+
+.
+
+## SKOS Collection of all Right Operand concepts defined by this Profile
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#constraintRightOperands>
+    a              skos:Collection ;
+    skos:prefLabel "ODRL Time Extension 'xtime' Constraint Right Operands"@en ;
+    skos:scopeNote "ODRL Time Extension 'xtime' v1 Terms"@en ;
+    skos:member    xtime:day ;
+    skos:member    xtime:month ;
+    skos:member    xtime:quarterOfYearFirst ;
+    skos:member    xtime:quarterOfYearSecond ;
+    skos:member    xtime:quarterOfYearThird ;
+    skos:member    xtime:quarterOfYearFourth ;
+    skos:member    xtime:tomorrow ;
+    skos:member    xtime:year ;
 .
 
 ## SKOS Collection of all Action concepts defined by this Profile
@@ -89,13 +129,6 @@ xtime:
 #    skos:prefLabel "Actions for Rules"@en ;
 #    skos:scopeNote "Usage Control Profile v0.1 Terms"@en .
 
-## SKOS Collection of all Left Operand concepts defined by this Profile
-<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#constraintLeftOperands>
-    a              skos:Collection ;
-    skos:prefLabel "ODRL Time Extension 'xtime' Constraint Left Operands"@en ;
-    skos:scopeNote "ODRL Time Extension 'xtime' v1 Terms"@en ;
-    skos:member    xtime:dayOfWeek ;
-.
 
 <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#operators>
     a              skos:Collection ;

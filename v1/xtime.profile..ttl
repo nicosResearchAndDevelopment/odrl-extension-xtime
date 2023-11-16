@@ -96,7 +96,7 @@ xtime-profile:ProfileVocabulary-ttl    # The Usage Control Profile v0.1 Profile 
                         <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.startedby.ttl>,
                         <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/operators/xtime.operator.starts.ttl>
     ## endregion operators
-        ; ##REM: end of profile:hasArtifact
+        ; ## REM: end of profile:hasArtifact
     ## endregion profile:hasArtifact
     dct:title           "Time Extension 'xtime' Profile v0.1" ;
     owl:versionInfo     "1.0.0"^^xsd:string ;
