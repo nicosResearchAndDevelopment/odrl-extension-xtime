@@ -18,5 +18,3 @@ xtime:dayOfWeek
     rdfs:comment     """Result of 'xtime:dayOfWeek' is 'xsd:anyURI' pointing to (current) 'time:DayOfWeek' named individuals ('time:Sunday' - 'time:Saturday')."""@en ;
     rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:dayOfWeek> ;
     rdfs:isDefinedBy xtime: .
-
-## xtime.leftOperand.dayOfWeek.ttl

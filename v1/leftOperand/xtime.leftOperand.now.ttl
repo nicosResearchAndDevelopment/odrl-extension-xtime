@@ -16,7 +16,6 @@ xtime:now
     skos:definition  """TODO: xtime:now skos:definition"""@en ;
     skos:note        """TODO: xtime:now skos:note."""@en ;
     rdfs:comment     """Result of 'xtime:now' is 'xtime:temporalEntity' as an Instance of Time."""@en ;
-    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:dayOfWeek> ;
     rdfs:isDefinedBy xtime: .
 
 ## xtime.leftOperand.now.ttl

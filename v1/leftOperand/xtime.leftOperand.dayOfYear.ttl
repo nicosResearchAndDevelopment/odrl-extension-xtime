@@ -17,5 +17,3 @@ xtime:dayOfYear
     skos:note        """TODO: xtime:dayOfYear skos:note."""@en ;
     rdfs:comment     """Result of 'xtime:dayOfYear' returns current day as position in given (current) year in 'xsd:integer'."""@en ;
     rdfs:isDefinedBy xtime: .
-
-## xtime.leftOperand.dayOfYear.ttl
