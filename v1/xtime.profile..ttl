@@ -11,7 +11,7 @@
 @prefix ids:               <https://w3id.org/idsa/core/> .
 @prefix jla:               <https://www.nicos-ag.com/jlangkau> .
 
-@prefix xtime-profile:     <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+@prefix xtime:             <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
 
 # Declare the ODRL Core Profile artifacts
 
@@ -43,30 +43,26 @@ _:ODRL-Core-Profile-Version-2-2  # The ODRL Core Profile vocabulary terms
 
 ## Declare the artifacts of the Time Extension 'xtime' Profile
 
-xtime-profile: # Properties of the Time Extension 'xtime' Profile v0.1
+xtime: # Properties of the Time Extension 'xtime' Profile v0.1
     a                   profile:Profile ;
-    dct:title           "Time Extension 'xtime' v0.1 - ODRL Profile" ;
-    dct:description     """An ODRL Profile focusing on Time Extension 'xtime'."""@en ;
     profile:isProfileOf <http://www.w3.org/ns/odrl/2/core> ;
-    profile:hasResource xtime-profile:ProfileSpec-md ;
-    profile:hasResource xtime-profile:ProfileVocabulary-ttl ;
-    dct:publisher       "International Data Space Association (IDSA)" ;
-    dc:creator          "Jörg Langkau, nicos AG" ;
-    owl:versionInfo     "0.1"^^xsd:string ;
-    dct:issued          "2023-03-10"^^xsd:date .
+    profile:hasResource xtime:ProfileSpec-md ;
+    profile:hasResource xtime:ProfileVocabulary-ttl .
 
-xtime-profile:ProfileSpec-md # The Time Extension 'xtime' v0.1 specification MARKDOWN document
+
+xtime:ProfileSpec-md # The Time Extension 'xtime' v0.1 specification MARKDOWN document
     a                   profile:ResourceDescriptor ;
     profile:hasRole     role:specification ;
     profile:hasArtifact <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/README.md> ;
     dct:title           "Time Extension 'xtime' Profile v0.1" ;
     owl:versionInfo     "0.1"^^xsd:string ;
+    dct:publisher       "nicos Research & Development" ;
     dct:issued          "2023-03-10"^^xsd:date ;
     dct:format          <https://www.iana.org/assignments/media-types/text/markdown> ;
     ## TODO: (find the right URL) dct:conformsTo      <https://www.w3.org/TR/html/>
 .
 
-xtime-profile:ProfileVocabulary-ttl    # The Usage Control Profile v0.1 Profile vocabulary terms using RDF Turtle syntax
+xtime:ProfileVocabulary-ttl    # The Usage Control Profile v0.1 Profile vocabulary terms using RDF Turtle syntax
     a                   profile:ResourceDescriptor ;
     profile:hasRole     role:vocabulary ;
     ## region profile:hasArtifact
@@ -101,7 +97,7 @@ xtime-profile:ProfileVocabulary-ttl    # The Usage Control Profile v0.1 Profile 
     dct:title           "Time Extension 'xtime' Profile v0.1" ;
     owl:versionInfo     "1.0.0"^^xsd:string ;
     dct:issued          "2023-07-17"^^xsd:date ;
-    dct:publisher       "International Data Space Association (IDSA)" ;
+    dct:publisher       "nicos Research & Development" ;
     dct:format          <https://www.iana.org/assignments/media-types/text/turtle> ;
     dct:conformsTo      <https://www.w3.org/TR/turtle/> .
 

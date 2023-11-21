@@ -1,4 +1,3 @@
-    ## Definition of used or common namespaces
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -15,5 +14,5 @@ xtime:day
     a                skos:Concept ;
     skos:definition  """TODO:"""@en ;
     skos:note        """TODO:"""@en ;
-    rdfs:comment     """Result of 'xtime:day' has data type 'xtime:temporalEntity', reflecting given day (from now) as an interval."""@en ;
+    rdfs:comment     """Result of 'xtime:day' has data type 'xtime:time', reflecting given day (from now) as an interval."""@en ;
     rdfs:isDefinedBy xtime: .

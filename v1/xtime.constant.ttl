@@ -1,0 +1,109 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:  <https://www.w3.org/TR/owl-time/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+xtime:yearInMonths
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:yearInMonths "12"^^xsd:nonNegativeInteger ; .
+
+xtime:weekInDays
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:weekInDays "7"^^xsd:nonNegativeInteger ; .
+
+xtime:weekInHours
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:weekInHours "168"^^xsd:nonNegativeInteger ; .
+
+xtime:weekInMinutes
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:weekInMinutes "10080"^^xsd:nonNegativeInteger ; .
+
+xtime:weekInSeconds
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:weekInSeconds "604800"^^xsd:nonNegativeInteger ; .
+
+xtime:dayInHours
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:dayInHours "24"^^xsd:nonNegativeInteger ; .
+
+xtime:dayInMinutes
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:dayInMinutes "1440"^^xsd:nonNegativeInteger ; .
+
+xtime:dayInSeconds
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:dayInSeconds "86400"^^xsd:nonNegativeInteger ; .
+
+xtime:hourInMinutes
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:hourInMinutes "60"^^xsd:nonNegativeInteger ; .
+
+xtime:hourInSeconds
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:hourInSeconds "3600"^^xsd:nonNegativeInteger ; .
+
+xtime:minuteInSeconds
+    a                owl:DatatypeProperty ;
+    rdfs:domain      xtime: ;
+    rdfs:range       xsd:nonNegativeInteger ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:
+    xtime:minuteInSeconds "60"^^xsd:nonNegativeInteger ; .
+
+## xtime.constants.ttl

@@ -1,4 +1,3 @@
-    ## Definition of used or common namespaces
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -20,4 +19,3 @@ xtime:overlaps
     rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:intervalOverlaps> ;
     rdfs:isDefinedBy xtime: .
 
-## xtime.operator.overlaps.ttl

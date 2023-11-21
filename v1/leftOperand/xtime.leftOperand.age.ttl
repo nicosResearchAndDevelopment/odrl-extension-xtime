@@ -7,14 +7,12 @@
 
 @prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
 
-xtime:meets
+xtime:age
     a                owl:NamedIndividual ;
+    a                odrl:LeftOperand ;
+    rdfs:label       "age"@en ;
     a                skos:Concept ;
-    a                odrl:Operator ;
-    rdfs:label       "meets"@en ;
-    rdfs:comment     """TODO: xtime:meets rdfs:comment."""@en ;
-    skos:definition  """TODO: xtime:meets skos:definition"""@en ;
-    skos:note        """TODO: xtime:meets skos:note."""@en ;
-    owl:inverseOf    xtime:metBy ;
-    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:intervalMeets> ;
+    skos:definition  """TODO: xtime:age skos:definition"""@en ;
+    skos:note        """TODO: xtime:age skos:note."""@en ;
+    rdfs:comment     """Result of 'xtime:age' is 'xtime:time', an interval ended by *now*. 'xtime:age' will be used on assigner, assignee or asset for some refinements."""@en ;
     rdfs:isDefinedBy xtime: .

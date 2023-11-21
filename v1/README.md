@@ -23,7 +23,7 @@ URI: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/tree/m
 
 ## Prologue
 
-Some initial thoughts about time [here](./prologue.md). 
+Some initial thoughts about time [here](./prologue.md).
 
 ## Introduction
 
@@ -108,14 +108,38 @@ do not want to collide with *suggested prefix for the OWL-Time namespace* **time
 
 All `xtime` Left Operands:
 
-> [dayOfWeek](#dayofweek), [dayOfYear](#dayofyear), [monthOfYear](#monthofyear), [now](#now),
+> [age](#age), [dayOfWeek](#dayofweek), [dayOfYear](#dayofyear), [monthOfYear](#monthofyear), [now](#now),
 
+### age
+
+Age of given resource as an interval to current time (now).
+
+Data type: `xtime:time`.
+
+```turtle
+
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:       <https://www.w3.org/TR/owl-time/> .
+@prefix odrl:       <http://www.w3.org/ns/odrl/2/> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix xtime:      <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+<https://www.example.com/constraint/age-constraitn-1>
+    a                 odrl:Constraint ;
+    odrl:leftOperand  xtime:age ;
+    odrl:operator     xtime:durationLargerThanEquals ;
+    odrl:rightOperand "P18Y"^^xsd:yearMonthDuration ;
+    odrl:dataType     xtime:time ;
+    rdfs:isDefinedBy  <https://www.example.com/> .
+```
 
 ### dayOfWeek
 
 Day of week from current time (now). See [Time Ontology, "Day of week"](https://www.w3.org/TR/owl-time/#time:DayOfWeek).
 
 Data type: `xsd:anyURI`.
+
 Possible results
 
 ```
@@ -222,7 +246,7 @@ greg:December
 
 Current time (now).
 
-Data type: `xtime:temporalEntity`.
+Data type: `xtime:time`.
 
 ```turtle
 
@@ -235,10 +259,10 @@ Data type: `xtime:temporalEntity`.
 
 <https://www.example.com/constraint/42-42-42-42-42>
     a                 odrl:Constraint ;
-    odrl:leftOperand  xtime:now ;       ## "2023-06-01T12:00:00Z;P0Y;2024-06-01T12:00:00Z"^^xtime:temporalEntity
+    odrl:leftOperand  xtime:now ;       ## "2023-06-01T12:00:00Z/P0Y/2024-06-01T12:00:00Z"^^xtime:time
     odrl:operator     xtime:before ;
-    odrl:rightOperand xtime:tomorrow ;  ## "2023-06-02T00:00:00Z;P1D;2024-06-03T00:00:00Z"^^xtime:temporalEntity
-    odrl:dataType     xtime:temporalEntity ;
+    odrl:rightOperand xtime:tomorrow ;  ## "2023-06-02T00:00:00Z/P1D/2024-06-03T00:00:00Z"^^xtime:time
+    odrl:dataType     xtime:time ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
 
@@ -299,21 +323,22 @@ All `xtime` Operators:
 
 All `xtime` Right Operands:
 
-> [day](#day), [month](#month), [now](#now), [quarterOfYearFirst](#quarterOfYearFirst), [quarterOfYearSecond](#quarterOfYearSecond)
-> , [quarterOfYearThird](#quarterOfYearThird), [quarterOfYearFourth](#quarterOfYearFourth), [tomorrow](#tomorrow), [year](#year)
+> [day](#day), [month](#month), [now](#now), [quarterOfYearFirst](#quarterOfYearFirst)
+> , [quarterOfYearSecond](#quarterOfYearSecond)
+> , [quarterOfYearThird](#quarterOfYearThird), [quarterOfYearFourth](#quarterOfYearFourth), [tomorrow](#tomorrow)
+> , [year](#year)
 
 ### Day
 
 Current day (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
-
+Data type `xtime:time`
 
 ### Month
 
 Current month (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ```turtle
 
@@ -326,22 +351,22 @@ Data type `xtime:temporalEntity`
 
 <https://www.example.com/constraint/43-42-42-42-42>
     a                 odrl:Constraint ;
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;P0Y;2049-06-01T12:00:00.42Z"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z/P0Y/2049-06-01T12:00:00.42Z"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;P0Y;"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z/P0Y/"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;;2049-06-01T12:00:00.42Z"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z//2049-06-01T12:00:00.42Z"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;;"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z//"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z"^^xtime:time ;
     ## same as
     odrl:leftOperand  "2049-06-01T12:00:00.42Z"^^xsd:dateTimeStamp ;
     ## will be also "true"^^xsd:boolean
-    odrl:leftOperand  "2049-06-01"^^xsd:date ; ## "2049-06-01T00:00:00Z;P1D;2049-06-02T00:00:00Z"^^xtime:temporalEntity
+    odrl:leftOperand  "2049-06-01"^^xsd:date ; ## "2049-06-01T00:00:00Z;P1D;2049-06-02T00:00:00Z"^^xtime:time
     odrl:operator     xtime:after ;
-    odrl:rightOperand xtime:month ; ## "2023-01-01T00:00:00Z;P1M;2024-02-01T00:00:00Z"^^xtime:temporalEntity
-    odrl:dataType     xtime:temporalEntity ;
+    odrl:rightOperand xtime:month ; ## "2023-01-01T00:00:00Z;P1M;2024-02-01T00:00:00Z"^^xtime:time
+    odrl:dataType     xtime:time ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
 
@@ -349,43 +374,43 @@ Data type `xtime:temporalEntity`
 
 Current time as an Instance.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ### QuarterOfYearFirst
 
 First quarter of year (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ### QuarterOfYearSecond
 
 Second quarter of year (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ### QuarterOfYearThird
 
 Third quarter of year (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ### QuarterOfYearFourth
 
 Forth quarter of year (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ### Tomorrow
 
 Tomorrow, the following day (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ### Year
 
 Current year (from now) as an Interval.
 
-Data type `xtime:temporalEntity`
+Data type `xtime:time`
 
 ```turtle
 
@@ -398,23 +423,28 @@ Data type `xtime:temporalEntity`
 
 <https://www.example.com/constraint/43-42-42-42-42>
     a                 odrl:Constraint ;
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;P0Y;2049-06-01T12:00:00.42Z"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z/P0Y/2049-06-01T12:00:00.42Z"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06v01T12:00:00.42Z;P0Y;"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06v01T12:00:00.42Z/P0Y/"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;;2049-06-01T12:00:00.42Z"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z//2049-06-01T12:00:00.42Z"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z;;"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z//"^^xtime:time ;
     ## same as
-    odrl:leftOperand  "2049-06-01T12:00:00.42Z"^^xtime:temporalEntity ;
+    odrl:leftOperand  "2049-06-01T12:00:00.42Z"^^xtime:time ;
     ## same as
     odrl:leftOperand  "2049-06-01T12:00:00.42Z"^^xsd:dateTimeStamp ;
     ## will be also "true"^^xsd:boolean
-    odrl:leftOperand  "2049-06-01"^^xsd:date ; ## "2049-06-01T00:00:00Z;P1D;2049-06-02T00:00:00Z"^^xtime:temporalEntity
+    odrl:leftOperand  "2049-06-01"^^xsd:date ; ## "2049-06-01T00:00:00Z;P1D;2049-06-02T00:00:00Z"^^xtime:time
     odrl:operator     xtime:after ;
-    odrl:rightOperand xtime:year ; ## "2023-01-01T00:00:00Z;P1Y;2024-01-01T00:00:00Z"^^xtime:temporalEntity
-    odrl:dataType     xtime:temporalEntity ;
+    odrl:rightOperand xtime:year ; ## "2023-01-01T00:00:00Z;P1Y;2024-01-01T00:00:00Z"^^xtime:time
+    odrl:dataType     xtime:time ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
 
+## References
+
+- ["Date and time expressed according to ISO 8601", wiki, en](https://en.wikipedia.org/wiki/ISO_8601)
+- ["Date and Time on the Internet: Timestamps", RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)
+- 
 ---

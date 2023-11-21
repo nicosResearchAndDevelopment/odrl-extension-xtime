@@ -10,10 +10,10 @@
 
 xtime:after
     a                owl:NamedIndividual ;
-    a                skos:Concept ;
     a                odrl:Operator ;
     rdfs:label       "after"@en ;
     rdfs:comment     """TODO: xtime:after rdfs:comment."""@en ;
+    a                skos:Concept ;
     skos:definition  """TODO: xtime:after skos:definition"""@en ;
     skos:note        """TODO: xtime:after skos:note."""@en ;
     owl:inverseOf    xtime:before ;

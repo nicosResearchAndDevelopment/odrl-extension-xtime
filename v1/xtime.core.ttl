@@ -1,0 +1,27 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:  <https://www.w3.org/TR/owl-time/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+xtime:time
+    a                rdfs:Datatype ;
+    rdfs:label       "time"@en ;
+    skos:prefLabel   "time" ;
+    skos:definition  "" ;
+    skos:note        """TODO: xtime:after skos:note."""@en ;
+    rdfs:comment     """The semantics are inspired by RFC3339 <https://datatracker.ietf.org/doc/html/rfc3339>, Appendix A, here: "Periods".
+Example: "2049-06-01T12:00:00.042Z/P1D/2049-06-02T12:00:00.042Z"^^xtime:time """@en ;
+    rdfs:seeAlso     "https://datatracker.ietf.org/doc/html/rfc3339#appendix-A"^^xsd:anyURI ;
+    rdfs:isDefinedBy xtime: .
+
+xtime:timeEntity
+    a                owl:DatatypeProperty ;
+#    rdfs:domain       ;
+    rdfs:range       xtime:time ;
+    rdfs:isDefinedBy xtime: .
+
+## xtime.core.ttl

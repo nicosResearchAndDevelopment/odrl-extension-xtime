@@ -1,0 +1,204 @@
+@prefix cc:         <http://creativecommons.org/ns#> .
+@prefix dct:        <http://purl.org/dc/terms/> .
+@prefix odrl:       <http://www.w3.org/ns/odrl/2/> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:     <http://schema.org/> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:       <http://www.w3.org/2006/time#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix xtime:      <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
+
+
+xtime:
+    a               owl:Ontology ;
+    rdfs:label      "ODRL Time Extension Profile 'xtime'"@en ;
+    owl:versionInfo "1.0.0" ;
+    dct:creator     "Jörg Langkau, nicos AG" ;
+    dct:contributor "nicos AG" ;
+    dct:description """."""@en ;
+    rdfs:comment    """."""@en ;
+    ## TODO: license :: dct:license      <http://creativecommons.org/licenses/by/4.0/> ;
+.
+
+## SKOS Collection of all concepts defined by this Profile
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/>
+    a                skos:Collection ;
+    skos:prefLabel   "ODRL Time Extension 'xtime' Profile"@en ;
+    skos:scopeNote   "All terms of the Time Extension 'xtime' Profile v0.1"@en ;
+    ## all members below are from the ODRL Common Vocabulary, a specification exists
+    ## region    ODRL
+    ## region    ODRL : Left Operand
+    skos:member      odrl:dateTime ;
+    ## endregion ODRL : Left Operand
+    ## endregion ODRL
+    rdfs:isDefinedBy xtime: .
+
+## region Left Operand
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/>
+    skos:member      xtime:age ;
+    skos:member      xtime:dayOfWeek ;
+    skos:member      xtime:dayOfYear ;
+    skos:member      xtime:monthOfYear ;
+    skos:member      xtime:now ;
+    rdfs:isDefinedBy xtime: .
+## SKOS Collection of all Left Operand concepts defined by this Profile
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#constraintLeftOperands>
+    a                skos:Collection ;
+    skos:prefLabel   "ODRL Time Extension 'xtime' Constraint Left Operands"@en ;
+    skos:scopeNote   "ODRL Time Extension 'xtime' v1 Terms"@en ;
+    ## order :: ALPHA
+    skos:member      xtime:age ;
+    skos:member      xtime:dayOfWeek ;
+    skos:member      xtime:dayOfYear ;
+    skos:member      xtime:monthOfYear ;
+    skos:member      xtime:now ;
+    rdfs:isDefinedBy xtime: .
+## endregion Left Operand
+
+## region Operator
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/>
+    skos:member      xtime:before ;
+    skos:member      xtime:after ;
+    skos:member      xtime:meets ;
+    skos:member      xtime:metBy ;
+    skos:member      xtime:overlaps ;
+    skos:member      xtime:overlappedBy ;
+    skos:member      xtime:starts ;
+    skos:member      xtime:startedBy ;
+    skos:member      xtime:during ;
+    skos:member      xtime:contains ;
+    skos:member      xtime:finishes ;
+    skos:member      xtime:finishedBy ;
+    skos:member      xtime:equals ;
+    skos:member      xtime:in ;               ## REM: 'In' (the union of During, Starts and Finishes)
+    skos:member      xtime:disjoint ;         ## REM: 'Disjoint' (the union of Before and After)
+    ## region      operator : duration-centric
+    skos:member      xtime:durationEquals ;
+    skos:member      xtime:durationShorterThanEquals ;
+    skos:member      xtime:durationShorterThan ;
+    skos:member      xtime:durationLargerThan ;
+    skos:member      xtime:durationLargerThanEquals ;
+    ## endregion   operator : duration-centric
+    rdfs:isDefinedBy xtime: .
+
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#operators>
+    a                skos:Collection ;
+    skos:prefLabel   "ODRL Time Extension 'xtime' Constraint Operators"@en ;
+    skos:scopeNote   "ODRL Time Extension 'xtime' Profile v1 Terms"@en ;
+    skos:member      xtime:before ;
+    skos:member      xtime:after ;
+    skos:member      xtime:meets ;
+    skos:member      xtime:metBy ;
+    skos:member      xtime:overlaps ;
+    skos:member      xtime:overlappedBy ;
+    skos:member      xtime:starts ;
+    skos:member      xtime:startedBy ;
+    skos:member      xtime:during ;
+    skos:member      xtime:contains ;
+    skos:member      xtime:finishes ;
+    skos:member      xtime:finishedBy ;
+    skos:member      xtime:equals ;
+    skos:member      xtime:in ;               ## REM: 'In' (the union of During, Starts and Finishes)
+    skos:member      xtime:disjoint ;         ## REM: 'Disjoint' (the union of Before and After)
+    ## region      operator : duration-centric
+    skos:member      xtime:durationEquals ;
+    skos:member      xtime:durationShorterThanEquals ;
+    skos:member      xtime:durationShorterThan ;
+    skos:member      xtime:durationLargerThan ;
+    skos:member      xtime:durationLargerThanEquals ;
+    ## endregion   operator : duration-centric
+    rdfs:isDefinedBy xtime: .
+## endregion Operator
+
+## region Right Operand
+
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/>
+    ## order :: ALPHA
+    skos:member      xtime:day ;
+    skos:member      xtime:month ;
+    skos:member      xtime:quarterOfYearFirst ;
+    skos:member      xtime:quarterOfYearSecond ;
+    skos:member      xtime:quarterOfYearThird ;
+    skos:member      xtime:quarterOfYearFourth ;
+    skos:member      xtime:tomorrow ;
+    skos:member      xtime:year ;
+    rdfs:isDefinedBy xtime: .
+
+## SKOS Collection of all Right Operand concepts defined by this Profile
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#constraintRightOperands>
+    a                skos:Collection ;
+    skos:prefLabel   "ODRL Time Extension 'xtime' Constraint Right Operands"@en ;
+    skos:scopeNote   "ODRL Time Extension 'xtime' v1 Terms"@en ;
+    ## order :: ALPHA
+    skos:member      xtime:day ;
+    skos:member      xtime:month ;
+    skos:member      xtime:quarterOfYearFirst ;
+    skos:member      xtime:quarterOfYearSecond ;
+    skos:member      xtime:quarterOfYearThird ;
+    skos:member      xtime:quarterOfYearFourth ;
+    skos:member      xtime:tomorrow ;
+    skos:member      xtime:year ;
+    rdfs:isDefinedBy xtime: .
+## endregion Right Operand
+
+## region Action
+## SKOS Collection of all Action concepts defined by this Profile
+<https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#actions>
+    a                skos:Collection ;
+    skos:prefLabel   "Actions for Rules"@en ;
+    skos:scopeNote   "Usage Control Profile v0.1 Terms"@en ;
+    rdfs:isDefinedBy xtime: .
+## endregion Action
+
+## Declaration of annotation properties to keep this ontology within OWL DL
+skos:member
+    rdf:type owl:AnnotationProperty .
+
+skos:note
+    rdf:type owl:AnnotationProperty .
+
+skos:scopeNote
+    rdf:type owl:AnnotationProperty .
+
+skos:prefLabel
+    rdf:type owl:AnnotationProperty .
+
+skos:definition
+    rdf:type owl:AnnotationProperty .
+
+dct:contributor
+    rdf:type owl:AnnotationProperty .
+
+dct:license
+    rdf:type owl:AnnotationProperty .
+
+dct:issued
+    rdf:type owl:AnnotationProperty .
+
+dct:subject
+    rdf:type owl:AnnotationProperty .
+
+dct:creator
+    rdf:type owl:AnnotationProperty .
+
+dct:description
+    rdf:type owl:AnnotationProperty .
+
+dct:isVersionOf
+    rdf:type owl:AnnotationProperty .
+
+dct:format
+    rdf:type owl:AnnotationProperty .
+
+skos:Collection
+    a owl:Class .
+
+skos:Concept
+    a owl:Class .
+
+skos:ConceptScheme
+    a owl:Class .
+
+## EOF xtime.ontology.ttl

@@ -1,4 +1,3 @@
-    ## Definition of used or common namespaces
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,13 +7,12 @@
 
 @prefix xtime: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
 
-xtime:dayOfWeek
+xtime:dayOfYear
     a                owl:NamedIndividual ;
     a                odrl:LeftOperand ;
-    rdfs:label       "dayOfWeek"@en ;
+    rdfs:label       "dayOfYear"@en ;
     a                skos:Concept ;
-    skos:definition  """TODO: xtime:dayOfWeek skos:definition"""@en ;
-    skos:note        """TODO: xtime:dayOfWeek skos:note."""@en ;
-    rdfs:comment     """Result of 'xtime:dayOfWeek' is 'xsd:anyURI' pointing to (current) 'time:DayOfWeek' named individuals ('time:Sunday' - 'time:Saturday')."""@en ;
-    rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:dayOfWeek> ;
+    skos:definition  """TODO: xtime:dayOfYear skos:definition"""@en ;
+    skos:note        """TODO: xtime:dayOfYear skos:note."""@en ;
+    rdfs:comment     """Result of 'xtime:dayOfYear' returns current day as position in given (current) year in 'xsd:integer'."""@en ;
     rdfs:isDefinedBy xtime: .

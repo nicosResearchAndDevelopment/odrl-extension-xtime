@@ -15,5 +15,5 @@ xtime:year
     a                skos:Concept ;
     skos:definition  """TODO:"""@en ;
     skos:note        """TODO:"""@en ;
-    rdfs:comment     """Result of 'xtime:year' has data type 'xtime:temporalEntity', reflecting a interval."""@en ;
+    rdfs:comment     """Result of 'xtime:year' has data type 'xtime:time', reflecting a interval."""@en ;
     rdfs:isDefinedBy xtime: .

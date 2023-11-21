@@ -4,6 +4,11 @@
 
 ## TODO
 
+### https://en.wikipedia.org/wiki/ISO_8601
+
+https://en.wikipedia.org/wiki/ISO_8601
+
+
 ### 8. Making an ODRL Profile publicly available
    If an ODRL Profile should be used by a public audience it is highly recommended to make its spefications publicly accessible:
 
