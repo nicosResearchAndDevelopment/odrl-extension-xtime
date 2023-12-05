@@ -148,7 +148,7 @@ xtime:
 <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/#actions>
     a                skos:Collection ;
     skos:prefLabel   "Actions for Rules"@en ;
-    skos:scopeNote   "Usage Control Profile v0.1 Terms"@en ;
+#    skos:scopeNote   ""@en ;
     rdfs:isDefinedBy xtime: .
 ## endregion Action
 
@@ -201,4 +201,4 @@ skos:Concept
 skos:ConceptScheme
     a owl:Class .
 
-## EOF xtime.ontology.ttl
+###

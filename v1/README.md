@@ -441,6 +441,13 @@ Data type `xtime:time`
     odrl:dataType     xtime:time ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
+---
+
+## Right Operand
+
+All `xtime` Right Operands:
+
+---
 
 ## References
 

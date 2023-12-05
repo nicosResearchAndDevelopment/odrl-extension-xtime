@@ -24,4 +24,4 @@ xtime:timeEntity
     rdfs:range       xtime:time ;
     rdfs:isDefinedBy xtime: .
 
-## xtime.core.ttl
+###

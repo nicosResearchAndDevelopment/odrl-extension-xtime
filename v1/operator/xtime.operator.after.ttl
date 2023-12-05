@@ -20,4 +20,4 @@ xtime:after
     rdfs:seeAlso     <https://www.w3.org/TR/owl-time/#time:after> ;
     rdfs:isDefinedBy xtime: .
 
-## xtime.operator.after.ttl
+###

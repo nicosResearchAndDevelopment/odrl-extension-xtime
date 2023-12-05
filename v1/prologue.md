@@ -1,3 +1,3 @@
-# Prologue for time
+# Prologue for `xtime`
 
 ---

@@ -8,7 +8,6 @@
 @prefix role:              <http://www.w3.org/ns/dx/prof/role/> .
 @prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix ids:               <https://w3id.org/idsa/core/> .
 @prefix jla:               <https://www.nicos-ag.com/jlangkau> .
 
 @prefix xtime:             <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/v1/> .
