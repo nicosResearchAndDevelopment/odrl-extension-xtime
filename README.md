@@ -10,6 +10,6 @@
 
 ## References
 
-- [https://www.w3.org/TR/vc-data-model-2.0/#representing-time](https://www.w3.org/TR/vc-data-model-2.0/#representing-time)
-- 
+[Linked Data Spaces (LDS) Time References](https://github.com/nicosResearchAndDevelopment/LDS/tree/main/references/time).
+
 ---

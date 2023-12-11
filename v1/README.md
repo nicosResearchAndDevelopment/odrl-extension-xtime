@@ -12,18 +12,20 @@ URI: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/tree/m
 
 ## Table of Content
 
-- [Prologue](#prologue)
-- [Introduction](#introduction)
-- [Left Operand](#left-operand)
-- [Operator](#operator)
-- [Right Operand](#right-operand)
-- [TODO](./TODO.md)
+- [**Prologue**](#prologue)
+- [**Introduction**](#introduction)
+- [**Left Operand**](#left-operand)
+- [**Operator**](#operator)
+- [**Right Operand**](#right-operand)
+- [*TODO*](./TODO.md)
 
 *Table of Content "xtime, ODRL extension for OWL Time Ontology"*.
 
 ## Prologue
 
 Some initial thoughts about time [here](./prologue.md).
+
+---
 
 ## Introduction
 
@@ -134,6 +136,8 @@ Data type: `xtime:time`.
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
 
+---
+
 ### dayOfWeek
 
 Day of week from current time (now). See [Time Ontology, "Day of week"](https://www.w3.org/TR/owl-time/#time:DayOfWeek).
@@ -171,6 +175,8 @@ time:Sunday
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
 
+---
+
 ### dayOfYear
 
 Day of year from current time (now).
@@ -194,6 +200,8 @@ Data type: `xsd:nonNegativeInteger`.
     odrl:dataType     xsd:nonNegativeInteger ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
+
+---
 
 ### monthOfYear
 
@@ -241,6 +249,8 @@ greg:December
     odrl:dataType     xsd:anyURI ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
+
+---
 
 ### now
 
@@ -370,6 +380,8 @@ Data type `xtime:time`
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
 
+---
+
 ### Now
 
 Current time as an Instance.
@@ -451,7 +463,7 @@ All `xtime` Right Operands:
 
 ## References
 
-- ["Date and time expressed according to ISO 8601", wiki, en](https://en.wikipedia.org/wiki/ISO_8601)
-- ["Date and Time on the Internet: Timestamps", RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)
-- 
+- [xtime, time related Data Types, Properties and Operands](../timeRelated/README.md)
+- [LDS, Time related References](https://github.com/nicosResearchAndDevelopment/LDS/tree/main/references/time)
+
 ---
