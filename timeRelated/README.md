@@ -34,13 +34,14 @@
 |-----------|-------------------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **xsd**   |                   |                            |                                                                                                                                                                                                                                          |
 |           | date              | interval                   | `[ dcterms:dateAccepted "2020-12-20"^^xsd:date ; ] .`                                                                                                                                                                                    |
-|           | time              | instant (from now)         |                                                                                                                                                                                                                                          |
+|           | time              | instant                    |                                                                                                                                                                                                                                          |
 |           | dateTime          | instant                    |                                                                                                                                                                                                                                          |
 |           | dateTimestamp     | instant; explicit timezone |                                                                                                                                                                                                                                          |
-|           | gDay              | interval (from now)        | `"---3"^^xsd:gDay`                                                                                                                                                                                                                       |
-|           | gMonth            | interval (from now)        | `"--2"^^xsd:gMonth`                                                                                                                                                                                                                      |
+|           | gDay              | interval                   | `"---3"^^xsd:gDay`                                                                                                                                                                                                                       |
+|           | gMonth            | interval                   | `"--2"^^xsd:gMonth`                                                                                                                                                                                                                      |
+|           | gYear             | interval                   | `"2042"^^xsd:gYear`                                                                                                                                                                                                                      |
 |           | ...               |                            |                                                                                                                                                                                                                                          |
-|           | duration          | not recommended            | `"P0Y"^^xsd:duration`                                                                                                                                                                                                                    |
+|           | duration          | *not recommended*          | `"P1Y3M1DT3H2M1S"^^xsd:duration`                                                                                                                                                                                                         |
 |           | dayTimeDuration   | no year or month portion   | `"P1DT3H2M1S"^^xsd:dayTimeDuration`                                                                                                                                                                                                      |
 |           | yearMonthDuration | no day or time portion     | `"P2M"^^xsd:yearMonthDuration; "P1Y2M"^^xsd:yearMonthDuration`                                                                                                                                                                           |
 | **xtime** |                   |                            |                                                                                                                                                                                                                                          |
@@ -92,8 +93,6 @@
 |                    | [iat](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.6)                                                            | "issued at" in seconds; instant; `xsd:dateTimeStamp`                                                                                                                      |                                                                                                                                                                                           |
 |                    | [nbf](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5)                                                            | "not before" in seconds; instant; `xsd:dateTimeStamp`                                                                                                                     |                                                                                                                                                                                           |
 
-
-
 *Time related Properties (Data Type)*.
 
 ---
@@ -109,7 +108,9 @@
 
 ---
 
-## Left Operands
+## ODRL
+
+### Left Operands
 
 | Scope     | Operand     | Comment                                                               | Example                                                                                                                                                                                                 |
 |-----------|-------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -134,7 +135,7 @@
 
 ---
 
-## Operators
+### Operators
 
 | Scope     | Operator                  | Comment           | Example |
 |-----------|---------------------------|-------------------|---------|
