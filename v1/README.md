@@ -18,6 +18,7 @@ URI: <https://github.com/nicosResearchAndDevelopment/odrl-extension-xtime/tree/m
 - [**Operator**](#operator)
 - [**Right Operand**](#right-operand)
 - [*TODO*](./TODO.md)
+- [**References**](#references)
 
 *Table of Content "xtime, ODRL extension for OWL Time Ontology"*.
 
@@ -338,13 +339,13 @@ All `xtime` Right Operands:
 > , [quarterOfYearThird](#quarterOfYearThird), [quarterOfYearFourth](#quarterOfYearFourth), [tomorrow](#tomorrow)
 > , [year](#year)
 
-### Day
+### day
 
 Current day (from now) as an Interval.
 
 Data type `xtime:time`
 
-### Month
+### month
 
 Current month (from now) as an Interval.
 
@@ -382,43 +383,43 @@ Data type `xtime:time`
 
 ---
 
-### Now
+### now
 
 Current time as an Instance.
 
 Data type `xtime:time`
 
-### QuarterOfYearFirst
+### quarterOfYearFirst
 
 First quarter of year (from now) as an Interval.
 
 Data type `xtime:time`
 
-### QuarterOfYearSecond
+### quarterOfYearSecond
 
 Second quarter of year (from now) as an Interval.
 
 Data type `xtime:time`
 
-### QuarterOfYearThird
+### quarterOfYearThird
 
 Third quarter of year (from now) as an Interval.
 
 Data type `xtime:time`
 
-### QuarterOfYearFourth
+### quarterOfYearFourth
 
 Forth quarter of year (from now) as an Interval.
 
 Data type `xtime:time`
 
-### Tomorrow
+### tomorrow
 
 Tomorrow, the following day (from now) as an Interval.
 
 Data type `xtime:time`
 
-### Year
+### year
 
 Current year (from now) as an Interval.
 
@@ -453,12 +454,6 @@ Data type `xtime:time`
     odrl:dataType     xtime:time ;
     rdfs:isDefinedBy  <https://www.example.com/> .
 ```
----
-
-## Right Operand
-
-All `xtime` Right Operands:
-
 ---
 
 ## References
